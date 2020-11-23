@@ -10,8 +10,8 @@ The best way to learn programming is to build from scratch on top of a very simp
 >**A toy datasets collections for machine learning research quick reference**  
 The best way to learn programming is to build from scratch on top of a very simple hello world program. The best way to learn machine learning is to start from one of the most simple toy datasets which is similar to the real world problem. I organize the directories of this repository by dataset names. Each datasets may represents more than one problem, while each problem may have multiple approaches to solve, therefore each directory may have more than one Jupyter Notebooks files.
 
-# Apple Daily
-A list of Apple Daily articles along with the corresponding repos
+# Apple Daily (數碼金魚缸)
+I regularly publish on [香港蘋果日報 (Apple Daily Hong Kong)](https://hk.appledaily.com) in the Financial Column **數碼金魚缸** under the name of **量子雪球 (Quantum Snowball)**. All topics covered are related to quantitative finance, numerical market research, data science, machine learning, etc. If you have any interesting topics to suggest, please feel free to inbox me. Below is a list of Apple Daily articles along with the corresponding Github repositories.
 
 ## [Apple Daily 2020-11-02](https://hk.appledaily.com/finance/20201102/NBBDKFFVFNCCJGWIOD24FDPPWY/)  
 > Title: **大裁員後 危機未除 國泰價殘 墮估值陷阱**  
