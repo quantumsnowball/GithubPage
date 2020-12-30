@@ -13,6 +13,10 @@ The best way to learn programming is to build from scratch on top of a very simp
 # Apple Daily (數碼金魚缸)
 I regularly publish on [香港蘋果日報 (Apple Daily Hong Kong)](https://hk.appledaily.com) in the Financial Column **數碼金魚缸** under the name of **量子雪球 (Quantum Snowball)**. All topics covered are related to quantitative finance, numerical market research, data science, machine learning, etc. If you have any interesting topics to suggest, please feel free to inbox me. Below is a list of Apple Daily articles along with the corresponding Github repositories.
 
+## [Apple Daily 2020-12-28](https://hk.appledaily.com/finance/20201228/HCDJ7HVKHFCW7LF43RYA2DYRDE/)  
+> Title: **10%資金揸Bitcoin抗量寬**  
+Repo: <https://github.com/quantumsnowball/AppleDaily20201228>  
+
 ## [Apple Daily 2020-11-30](https://hk.appledaily.com/finance/20201130/ZLN5Q6KN4VC7LMQ6JFENXLOFRY/)  
 > Title: **美國大選膠着打亂市場秩序 善用高頻數據 抗「總加速師」**  
 Repo: <https://github.com/quantumsnowball/AppleDaily20201130>  
