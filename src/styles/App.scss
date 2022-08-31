@@ -1,18 +1,55 @@
-$fg: blue;
+@use './base.scss';
 
-h1 {
-  align-self: center;
-  flex-grow: 1;
 
-  color: $fg;
+$fg-default: Black;
+$bg-default: White;
+
+$fg-appbar: #ccc;
+$bg-appbar: #222;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App {
+.app-ctn {
+  @include base.flex-column-center-items;
   height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-content: center;
+}
+
+.appbar-ctn {
+  color: $fg-appbar;
+  background-color: $bg-appbar;
+  height: 50px;
+  align-self: stretch;
+  @include base.flex-row;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+
+  h3 {
+    color: $fg-appbar;
+    padding: 10px;
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+      a {
+        color: $fg-appbar;
+        text-align: center;
+        padding: 10px 5px;
+      }
+      a:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+.main-ctn {
+  @include base.flex-center-self;
+  @include base.flex-grow-self;
+  @include base.flex-column-center-items;
+  color: $fg-default;
 }
