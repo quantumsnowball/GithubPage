@@ -5,7 +5,11 @@
 .main-ctn {
   @include base.flex-center-self;
   @include base.flex-grow-self;
-  @include base.flex-column-center-items;
+  align-self: stretch;
+  text-align: left;
   color: $fg-default;
+  margin: 30px;
+  padding: 30px;
+  overflow: auto;
 }
 

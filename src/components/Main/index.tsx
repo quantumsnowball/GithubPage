@@ -1,10 +1,14 @@
 import '../../styles/components/Main.scss'
+import ReactMarkdown from 'react-markdown'
+import content from '../../content/main.md'
 
 
 function Main() {
   return (
     <div className="main-ctn">
-      <h3>Main Area</h3>
+      <ReactMarkdown>
+        {content}
+      </ReactMarkdown>
     </div>
   )
 }
