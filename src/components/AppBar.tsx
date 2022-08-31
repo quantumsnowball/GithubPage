@@ -5,7 +5,7 @@ import '../styles/components/AppBar.scss'
 function AppBar() {
   return (
     <div className="appbar-ctn">
-      <h3>Quantum Snowball</h3>
+      <h3><Link to="/">Quantum Snowball</Link></h3>
       <div style={{ flexGrow: 1 }} />
       <div>
         <ul>

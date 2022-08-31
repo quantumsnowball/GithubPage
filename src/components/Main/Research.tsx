@@ -1,11 +1,12 @@
 import ReactMarkdown from 'react-markdown'
-import content from '../../content/Intro.md'
+import content from '../../content/Research.md'
 
 
-export default function Intro() {
+export default function Research() {
   return (
     <ReactMarkdown>
       {content}
     </ReactMarkdown>
   )
 }
+
