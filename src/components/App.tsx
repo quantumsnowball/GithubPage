@@ -1,4 +1,4 @@
-import '../styles/App.scss'
+import '../styles/components/App.scss'
 import AppBar from './AppBar'
 import Main from './Main'
 

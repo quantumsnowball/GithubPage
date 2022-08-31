@@ -1,0 +1,11 @@
+@use '../base.scss';
+@import '../colors.scss';
+
+
+.main-ctn {
+  @include base.flex-center-self;
+  @include base.flex-grow-self;
+  @include base.flex-column-center-items;
+  color: $fg-default;
+}
+

@@ -1,3 +1,6 @@
+import '../../styles/components/Main.scss'
+
+
 function Main() {
   return (
     <div className="main-ctn">

@@ -1,3 +1,6 @@
+import '../styles/components/AppBar.scss'
+
+
 function AppBar() {
   return (
     <div className="appbar-ctn">

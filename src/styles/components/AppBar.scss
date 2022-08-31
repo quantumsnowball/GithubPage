@@ -1,16 +1,6 @@
-@use './base.scss';
+@use '../base.scss';
+@import '../colors.scss';
 
-
-$fg-default: Black;
-$bg-default: White;
-
-$fg-appbar: #ccc;
-$bg-appbar: #222;
-
-.app-ctn {
-  @include base.flex-column-center-items;
-  height: 100vh;
-}
 
 .appbar-ctn {
   color: $fg-appbar;
@@ -30,9 +20,10 @@ $bg-appbar: #222;
     li {
       display: inline;
       a {
+        text-decoration: none;
         color: $fg-appbar;
         text-align: center;
-        padding: 10px 5px;
+        padding: 12px 5px;
       }
       a:hover {
         background-color: #555;
@@ -40,10 +31,4 @@ $bg-appbar: #222;
     }
   }
 }
-
-.main-ctn {
-  @include base.flex-center-self;
-  @include base.flex-grow-self;
-  @include base.flex-column-center-items;
-  color: $fg-default;
-}
+  
