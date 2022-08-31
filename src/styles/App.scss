@@ -1,5 +1,18 @@
 $fg: blue;
 
 h1 {
+  align-self: center;
+  flex-grow: 1;
+
   color: $fg;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }

@@ -3,10 +3,13 @@ import '../styles/App.scss'
 
 function App() {
   return (
-    <div>
-      <h1>
-        Hello World!! Now using typescript
-      </h1>
+    <div className="App">
+      <div>
+        <h1>
+          Hello World!
+          SASS flexbox
+        </h1>
+      </div>
     </div>
   )
 }
