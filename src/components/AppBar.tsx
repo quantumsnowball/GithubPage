@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/components/AppBar.scss'
 
 
@@ -8,12 +9,12 @@ function AppBar() {
       <div style={{ flexGrow: 1 }} />
       <div>
         <ul>
-          <li><a href="/apps">Apps</a></li>
-          <li><a href="/web-dev">Web Dev</a></li>
-          <li><a href="/apple-daily">Apple Daily</a></li>
-          <li><a href="/research">Research</a></li>
-          <li><a href="/data-science">Data Science</a></li>
-          <li><a href="/dotfiles">dotfiles</a></li>
+          <li><Link to="/apps">Apps</Link></li>
+          <li><Link to="/web-dev">Web Dev</Link></li>
+          <li><Link to="/apple-daily">Apple Daily</Link></li>
+          <li><Link to="/research">Research</Link></li>
+          <li><Link to="/data-science">Data Science</Link></li>
+          <li><Link to="/dotfiles">dotfiles</Link></li>
         </ul>
       </div>
     </div>

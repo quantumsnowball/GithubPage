@@ -8,6 +8,10 @@ const config = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  devServer: {
+    historyApiFallback: true,
+    hot: true
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',

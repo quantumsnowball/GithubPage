@@ -1,14 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
 import '../../styles/components/Main.scss'
-import ReactMarkdown from 'react-markdown'
-import content from '../../content/main.md'
+import Intro from './Intro'
 
 
 function Main() {
   return (
     <div className="main-ctn">
-      <ReactMarkdown>
-        {content}
-      </ReactMarkdown>
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/apps" element={<Intro />} />
+      </Routes>
     </div>
   )
 }
