@@ -1,9 +1,13 @@
-import React from 'react'
+import '../styles/App.scss'
 
 
 function App() {
   return (
-    <div>Hello World!! Now using typescript</div>
+    <div>
+      <h1>
+        Hello World!! Now using typescript
+      </h1>
+    </div>
   )
 }
 
