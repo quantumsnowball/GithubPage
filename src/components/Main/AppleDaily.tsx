@@ -1,11 +1,11 @@
 import ReactMarkdown from 'react-markdown'
-import content from '../../content/AppleDaily.md'
+import { items } from '../../data/AppleDaily'
 
 
 export default function AppleDaily() {
   return (
     <ReactMarkdown>
-      {content}
+      {items}
     </ReactMarkdown>
   )
 }

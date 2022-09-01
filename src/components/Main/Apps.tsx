@@ -1,11 +1,11 @@
 import ReactMarkdown from 'react-markdown'
-import content from '../../content/Apps.md'
+import { items } from '../../data/Apps'
 
 
 export default function Apps() {
   return (
     <ReactMarkdown>
-      {content}
+      {items}
     </ReactMarkdown>
   )
 }

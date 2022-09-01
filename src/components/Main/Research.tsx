@@ -1,11 +1,11 @@
 import ReactMarkdown from 'react-markdown'
-import content from '../../content/Research.md'
+import { items } from '../../data/Research'
 
 
 export default function Research() {
   return (
     <ReactMarkdown>
-      {content}
+      {items}
     </ReactMarkdown>
   )
 }
