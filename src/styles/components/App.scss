@@ -1,0 +1,7 @@
+@use '../base.scss';
+
+.app-ctn {
+  @include base.flex-column-center-items;
+  height: 100vh;
+}
+
