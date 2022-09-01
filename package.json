@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "@babel/core": "^7.18.13",
@@ -32,6 +33,7 @@
     "webpack-cli": "^4.10.0"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "webpack-dev-server": "^4.10.1"
   }
 }
