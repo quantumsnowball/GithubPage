@@ -1,9 +1,24 @@
+import { CustomFC } from '../types'
 import { Link } from 'react-router-dom'
 
 
+const AppBarCtn: CustomFC = ({ children }) => {
+  const css = {
+    display: 'flex flex-row',
+    boxAlignment: 'justify-center content-center items-center',
+    colors: 'bg-gray-700 text-white',
+  }
+  const tailwind = Object.values(css).join(' ')
+  return (
+    <div id="appbar-ctn" className={tailwind}>
+      {children}
+    </div>
+  )
+}
+
 function AppBar() {
   return (
-    <div id="appbar-ctn">
+    <AppBarCtn>
       <h3><Link to="/">Quantum Snowball</Link></h3>
       <div style={{ flexGrow: 1 }} />
       <div>
@@ -16,7 +31,7 @@ function AppBar() {
           <li><Link to="/dotfiles">dotfiles</Link></li>
         </ul>
       </div>
-    </div>
+    </AppBarCtn>
   )
 }
 

@@ -6,11 +6,25 @@ import Dotfiles from './Dotfiles'
 import Intro from './Intro'
 import Research from './Research'
 import WebDev from './WebDev'
+import { CustomFC } from '../../types'
 
+
+const MainCtn: CustomFC = ({ children }) => {
+  const css = {
+    display: 'flex flex-col flex-grow',
+    spacing: 'm-4 p-4'
+  }
+  const tailwind = Object.values(css).join(' ')
+  return (
+    <div id="main-ctn" className={tailwind}>
+      {children}
+    </div>
+  )
+}
 
 function Main() {
   return (
-    <div id="main-ctn">
+    <MainCtn>
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/apps" element={<Apps />} />
@@ -20,7 +34,7 @@ function Main() {
         <Route path="/data-science" element={<DataScience />} />
         <Route path="/dotfiles" element={<Dotfiles />} />
       </Routes>
-    </div>
+    </MainCtn>
   )
 }
 
