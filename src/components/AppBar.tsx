@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import '../styles/components/AppBar.scss'
 
 
 function AppBar() {

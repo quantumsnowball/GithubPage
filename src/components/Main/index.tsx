@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import '../../styles/components/Main.scss'
 import AppleDaily from './AppleDaily'
 import Apps from './Apps'
 import DataScience from './DataScience'
