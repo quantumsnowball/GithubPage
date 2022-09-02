@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function AppBar() {
   return (
-    <div className="appbar-ctn">
+    <div id="appbar-ctn">
       <h3><Link to="/">Quantum Snowball</Link></h3>
       <div style={{ flexGrow: 1 }} />
       <div>

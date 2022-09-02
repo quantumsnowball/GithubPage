@@ -6,7 +6,7 @@ import Main from './Main'
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-ctn">
+      <div id="app-ctn">
         <AppBar />
         <Main />
       </div>

@@ -10,7 +10,7 @@ import WebDev from './WebDev'
 
 function Main() {
   return (
-    <div className="main-ctn">
+    <div id="main-ctn">
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/apps" element={<Apps />} />
