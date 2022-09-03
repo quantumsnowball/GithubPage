@@ -10,11 +10,13 @@ import { CustomFC } from '../../types'
 
 
 const MainCtn: CustomFC = ({ children }) => {
-  const css = {
-    display: 'flex flex-col flex-grow',
-    spacing: 'm-4 p-4'
-  }
-  const tailwind = Object.values(css).join(' ')
+  const tailwind = `
+    p-8
+    flex
+    flex-col
+    flex-grow
+    overflow-auto
+ `
   return (
     <div id="main-ctn" className={tailwind}>
       {children}

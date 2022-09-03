@@ -5,11 +5,12 @@ import Main from './Main'
 
 
 const AppCtn: CustomFC = ({ children }) => {
-  const css = {
-    sizing: 'h-screen',
-    display: 'flex flex-col',
-  }
-  const tailwind = Object.values(css).join(' ')
+  const tailwind = `
+    h-screen
+    flex
+    flex-col
+    justify-between
+ `
   return (
     <div id="app-ctn" className={tailwind}>
       {children}
