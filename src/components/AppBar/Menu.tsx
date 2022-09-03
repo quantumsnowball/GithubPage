@@ -4,6 +4,15 @@ import { StateContext } from '../../types/AppBar'
 import { useContext } from 'react'
 
 
+const items = {
+  "/apps": "Apps",
+  "/web-dev": "Web Dev",
+  "/apple-daily": "Apple Daily",
+  "/research": "Research",
+  "/data-science": "Data Science",
+  "/dotfiles": "dotfiles"
+}
+
 const Ul: CustomFC = ({ children }) => {
   const { menu } = useContext(StateContext)
 
@@ -23,20 +32,27 @@ const Ul: CustomFC = ({ children }) => {
   )
 }
 
-const Li: CustomFC = ({ children }) => {
-  const tailwind = `
-    px-2
-    py-2
+const Li = ({ to, text }: {
+  to: string,
+  text: string
+}) => {
+  const tailwindLi = `
     self-stretch
     hover:bg-gray-500
     text-center
     md:text-left
     md:whitespace-nowrap
   `
+  const tailwindLink = `
+    inline-block
+    w-full
+    px-2
+    py-2
+  `
 
   return (
-    <li className={tailwind}>
-      {children}
+    <li className={tailwindLi} key={to}>
+      <Link className={tailwindLink} to={to}>{text}</Link>
     </li >
   )
 }
@@ -44,12 +60,7 @@ const Li: CustomFC = ({ children }) => {
 const Menu = () => {
   return (
     <Ul>
-      <Li><Link to="/apps">Apps</Link></Li>
-      <Li><Link to="/web-dev">Web Dev</Link></Li>
-      <Li><Link to="/apple-daily">Apple Daily</Link></Li>
-      <Li><Link to="/research">Research</Link></Li>
-      <Li><Link to="/data-science">Data Science</Link></Li>
-      <Li><Link to="/dotfiles">dotfiles</Link></Li>
+      {Object.entries(items).map(([to, text]) => <Li {...{ to, text }} />)}
     </Ul>
   )
 }
