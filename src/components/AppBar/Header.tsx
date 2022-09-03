@@ -2,7 +2,8 @@ import { CustomFC } from '../../types'
 import { Link } from 'react-router-dom'
 import { StateContext } from '../../types/AppBar'
 import { useContext } from 'react'
-import MenuIcon from '../../assets/hamburger.svg'
+import MenuOpenIcon from '../../assets/hamburger.svg'
+import MenuCloseIcon from '../../assets/cross.svg'
 
 
 const Header: CustomFC = ({ children }) => {
@@ -27,7 +28,7 @@ const Header: CustomFC = ({ children }) => {
       </span>
       {children}
       <a href="#" className='md:hidden' onClick={handleClick}>
-        <MenuIcon />
+        {menu ? <MenuCloseIcon /> : <MenuOpenIcon />}
       </a>
     </div>
   )
