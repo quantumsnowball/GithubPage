@@ -33,11 +33,15 @@ const config = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
+        test: /\.svg$/i,
+        use: ['@svgr/webpack']
+      },
+      {
         test: /\.md$/i,
         use: ["raw-loader"]
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
       },
     ]
