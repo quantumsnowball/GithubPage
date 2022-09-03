@@ -1,13 +1,8 @@
 import { CustomFC } from '../../types'
 import { Link } from 'react-router-dom'
-import { State } from '../../types/AppBar'
-import {
-  createContext,
-  useContext,
-} from 'react'
+import { StateContext } from '../../types/AppBar'
+import { useContext } from 'react'
 
-
-const StateContext = createContext({} as State)
 
 const Ul: CustomFC = ({ children }) => {
   const { menu } = useContext(StateContext)

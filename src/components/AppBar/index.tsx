@@ -1,14 +1,9 @@
 import { CustomFC } from '../../types'
-import { State } from '../../types/AppBar'
-import {
-  createContext,
-  useState,
-} from 'react'
+import { StateContext } from '../../types/AppBar'
+import { useState } from 'react'
 import Header from './Header'
 import Menu from './Menu'
 
-
-const StateContext = createContext({} as State)
 
 const AppBarCtn: CustomFC = ({ children }) => {
   const tailwind = `
