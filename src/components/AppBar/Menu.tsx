@@ -36,6 +36,8 @@ const Li = ({ to, text }: {
   to: string,
   text: string
 }) => {
+  const { setMenu } = useContext(StateContext)
+
   const tailwindLi = `
     self-stretch
     hover:bg-gray-500
@@ -50,9 +52,11 @@ const Li = ({ to, text }: {
     py-2
   `
 
+  const handleClick = () => setMenu(false)
+
   return (
     <li className={tailwindLi} key={to}>
-      <Link className={tailwindLink} to={to}>{text}</Link>
+      <Link className={tailwindLink} to={to} onClick={handleClick}>{text}</Link>
     </li >
   )
 }
