@@ -55,7 +55,7 @@ const Li = ({ to, text }: {
   const handleClick = () => setMenu(false)
 
   return (
-    <li className={tailwindLi} key={to}>
+    <li className={tailwindLi}>
       <Link className={tailwindLink} to={to} onClick={handleClick}>{text}</Link>
     </li >
   )
@@ -64,8 +64,9 @@ const Li = ({ to, text }: {
 const Menu = () => {
   return (
     <Ul>
-      {Object.entries(items).map(([to, text]) => <Li {...{ to, text }} />)}
+      {Object.entries(items).map(([to, text]) => <Li key={to} {...{ to, text }} />)}
     </Ul>
   )
 }
+
 export default Menu
