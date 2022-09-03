@@ -1,4 +1,5 @@
 import { CustomFC } from '../../types'
+import { Link } from 'react-router-dom'
 import { State } from '../../types/AppBar'
 import {
   createContext,
@@ -26,8 +27,9 @@ const Header: CustomFC = ({ children }) => {
   return (
     <div className={ctn}>
       <span className={title}>
-        {children}
+        <Link to="/">Quantum Snowball</Link>
       </span>
+      {children}
       <a href="#" className='md:hidden' onClick={handleClick}>
         <svg viewBox="0 0 100 80" width="30" height="30" fill='white' className='hover:bg-gray-500'>
           <rect y="0" width="100" height="15"></rect>
