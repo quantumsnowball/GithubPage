@@ -3,9 +3,10 @@ import ReactMarkdown from "react-markdown";
 
 
 const tailwindLi = `
+  my-3
   p-2
   rounded
-  shadow-lg
+  shadow-2xl
 `
 
 interface Props {
