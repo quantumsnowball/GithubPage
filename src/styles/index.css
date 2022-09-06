@@ -24,7 +24,7 @@
   .markdown img {
     @apply inline
   }
-  .markdown ul {
-    list-style: disc
+  .markdown p {
+    @apply p-1
   }
 }
