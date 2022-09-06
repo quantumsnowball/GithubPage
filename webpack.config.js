@@ -17,6 +17,10 @@ const config = {
       template: './public/index.html',
       // favicon: './public/favicon.ico'
     }),
+    new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: './public/404.html'
+    })
   ],
   module: {
     rules: [
