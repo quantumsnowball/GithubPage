@@ -4,7 +4,7 @@ import { items } from '../../data/Intro'
 
 export default function Intro() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )

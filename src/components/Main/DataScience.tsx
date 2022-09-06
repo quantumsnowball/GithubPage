@@ -4,7 +4,7 @@ import { items } from '../../data/DataScience'
 
 export default function DataScience() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )

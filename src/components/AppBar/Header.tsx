@@ -15,6 +15,7 @@ const Header: CustomFC = ({ children }) => {
   `
   const title = `
     text-2xl
+    font-bold
     cursor-pointer
     hover:bg-gray-500
   `

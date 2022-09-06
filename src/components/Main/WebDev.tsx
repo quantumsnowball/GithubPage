@@ -4,7 +4,7 @@ import { items } from '../../data/WebDev'
 
 export default function WebDev() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )

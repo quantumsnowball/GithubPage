@@ -4,7 +4,7 @@ import { items } from '../../data/Dotfiles'
 
 export default function Dotfiles() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )

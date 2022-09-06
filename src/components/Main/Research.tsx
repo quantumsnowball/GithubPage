@@ -4,7 +4,7 @@ import { items } from '../../data/Research'
 
 export default function Research() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )

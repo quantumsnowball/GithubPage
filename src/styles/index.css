@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .markdown h1 {
+    @apply text-4xl font-bold;
+  }
+  .markdown h2 {
+    @apply text-2xl font-bold;
+  }
+  .markdown h3 {
+    @apply text-lg font-bold;
+  }
+  .markdown h4 {
+    @apply text-sm font-bold;
+  }
+  .markdown a {
+    @apply text-blue-600 underline;
+  }
+  .markdown a:visited {
+    @apply text-purple-900 underline;
+  }
+  .markdown img {
+    @apply inline
+  }
+  .markdown ul {
+    list-style: disc
+  }
+}

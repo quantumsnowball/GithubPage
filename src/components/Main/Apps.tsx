@@ -4,7 +4,7 @@ import { items } from '../../data/Apps'
 
 export default function Apps() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )

@@ -4,7 +4,7 @@ import { items } from '../../data/AppleDaily'
 
 export default function AppleDaily() {
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className="markdown">
       {items}
     </ReactMarkdown>
   )
