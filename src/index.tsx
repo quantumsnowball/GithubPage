@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { StrictMode } from "react"
-import './styles/index.scss'
+import './styles/index.css'
 import App from './components/App'
 
 

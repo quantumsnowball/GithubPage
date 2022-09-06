@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown'
+import { Markdown } from '../utils'
 import { items } from '../../data/Apps'
 
 
 export default function Apps() {
   return (
-    <ReactMarkdown>
+    <Markdown>
       {items}
-    </ReactMarkdown>
+    </Markdown>
   )
 }
 
