@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown'
+import { Markdown } from '../utils'
 import { items } from '../../data/Research'
 
 
 export default function Research() {
   return (
-    <ReactMarkdown className="markdown">
+    <Markdown>
       {items}
-    </ReactMarkdown>
+    </Markdown>
   )
 }
 
