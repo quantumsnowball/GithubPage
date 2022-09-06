@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown'
-import content from '../../content/WebDev.md'
+import { Markdown } from '../utils'
+import { items } from '../../data/WebDev'
 
 
 export default function WebDev() {
   return (
-    <ReactMarkdown>
-      {content}
-    </ReactMarkdown>
+    <Markdown>
+      {items}
+    </Markdown>
   )
 }
 

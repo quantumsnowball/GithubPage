@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown'
-import content from '../../content/Dotfiles.md'
+import { Markdown } from '../utils'
+import { items } from '../../data/Dotfiles'
 
 
 export default function Dotfiles() {
   return (
-    <ReactMarkdown>
-      {content}
-    </ReactMarkdown>
+    <Markdown>
+      {items}
+    </Markdown>
   )
 }
 

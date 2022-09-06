@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import '../../styles/components/Main.scss'
 import AppleDaily from './AppleDaily'
 import Apps from './Apps'
 import DataScience from './DataScience'
@@ -7,11 +6,27 @@ import Dotfiles from './Dotfiles'
 import Intro from './Intro'
 import Research from './Research'
 import WebDev from './WebDev'
+import { CustomFC } from '../../types'
 
+
+const MainCtn: CustomFC = ({ children }) => {
+  const tailwind = `
+    p-8
+    flex
+    flex-col
+    flex-grow
+    overflow-auto
+ `
+  return (
+    <div id="main-ctn" className={tailwind}>
+      {children}
+    </div>
+  )
+}
 
 function Main() {
   return (
-    <div className="main-ctn">
+    <MainCtn>
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/apps" element={<Apps />} />
@@ -21,7 +36,7 @@ function Main() {
         <Route path="/data-science" element={<DataScience />} />
         <Route path="/dotfiles" element={<Dotfiles />} />
       </Routes>
-    </div>
+    </MainCtn>
   )
 }
 

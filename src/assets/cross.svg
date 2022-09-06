@@ -1,0 +1,5 @@
+<svg viewBox="0 0 80 80" width="30" height="30">
+  <line x1="0" y1="0" x2="80" y2="80" stroke="currentColor" stroke-width="15" />
+  <line x1="80" y1="0" x2="0" y2="80" stroke="currentColor" stroke-width="15" />
+</svg>
+

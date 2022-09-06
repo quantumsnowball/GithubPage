@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown'
-import content from '../../content/AppleDaily.md'
+import { Markdown } from '../utils'
+import { items } from '../../data/AppleDaily'
 
 
 export default function AppleDaily() {
   return (
-    <ReactMarkdown>
-      {content}
-    </ReactMarkdown>
+    <Markdown>
+      {items}
+    </Markdown>
   )
 }
 

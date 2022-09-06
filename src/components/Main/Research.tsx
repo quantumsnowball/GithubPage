@@ -1,12 +1,12 @@
-import ReactMarkdown from 'react-markdown'
-import content from '../../content/Research.md'
+import { Markdown } from '../utils'
+import { items } from '../../data/Research'
 
 
 export default function Research() {
   return (
-    <ReactMarkdown>
-      {content}
-    </ReactMarkdown>
+    <Markdown>
+      {items}
+    </Markdown>
   )
 }
 

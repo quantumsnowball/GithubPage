@@ -1,11 +1,12 @@
 import ReactMarkdown from 'react-markdown'
-import content from '../../content/Intro.md'
+import { items } from '../../data/Intro'
+import { Markdown } from '../utils'
 
 
 export default function Intro() {
   return (
-    <ReactMarkdown>
-      {content}
-    </ReactMarkdown>
+    <Markdown>
+      {items}
+    </Markdown>
   )
 }
