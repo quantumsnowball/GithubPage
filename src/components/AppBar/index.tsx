@@ -1,10 +1,6 @@
 import { CustomFC } from '../../types'
 import Header from './Header'
 import Menu from './Menu'
-import { useDispatch } from 'react-redux'
-import { themeActions } from '../../redux/slices/themeSlice'
-import { useSelector } from 'react-redux'
-import { RootState } from '../../redux/store'
 
 
 const AppBarCtn: CustomFC = ({ children }) => {

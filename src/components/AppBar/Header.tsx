@@ -2,6 +2,8 @@ import { CustomFC } from '../../types'
 import { Link } from 'react-router-dom'
 import MenuOpenIcon from '../../assets/hamburger.svg'
 import MenuCloseIcon from '../../assets/cross.svg'
+import SunIcon from '../../assets/sun.svg'
+import MoonIcon from '../../assets/moon.svg'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 import { useDispatch } from 'react-redux'
@@ -22,6 +24,7 @@ const Header: CustomFC = ({ children }) => {
   const title = `
     text-2xl
     font-bold
+    truncate
     cursor-pointer
     hover:bg-gray-500
   `
@@ -33,8 +36,10 @@ const Header: CustomFC = ({ children }) => {
       <span className={title}>
         <Link to="/">Quantum Snowball</Link>
       </span>
-      <button onClick={() => dispatch(themeActions.toggleMode())}>
-        <MenuOpenIcon />
+      <button
+        className='ml-3'
+        onClick={() => dispatch(themeActions.toggleMode())}>
+        {mode === 'light' ? <SunIcon /> : <MoonIcon />}
       </button>
       <div className='flex-grow md:hidden' />
       {children}
