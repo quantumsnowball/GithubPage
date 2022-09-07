@@ -16,13 +16,20 @@
     @apply text-sm font-bold;
   }
   .markdown code {
-    @apply rounded p-0.5 bg-gray-200
+    @apply 
+    rounded 
+    p-0.5 
+    bg-gray-200 dark:bg-gray-500
   }
   .markdown a {
-    @apply text-blue-600 underline;
+    @apply 
+    text-blue-600 dark:text-blue-400
+    underline;
   }
   .markdown a:visited {
-    @apply text-purple-900 underline;
+    @apply 
+    text-purple-900 dark:text-purple-500
+    underline;
   }
   .markdown img {
     @apply inline

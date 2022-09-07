@@ -50,8 +50,8 @@ const Li = ({ to, text }: {
   const tailwindLink = `
     inline-block
     w-full
-    px-2
-    py-2
+    px-3 md:px-1
+    py-3 md:py-1
   `
 
   const handleClick = () => dispatch(layoutActions.closeMenu())
