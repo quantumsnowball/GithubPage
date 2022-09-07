@@ -1,13 +1,17 @@
 import { CustomFC } from '../../types'
 import { Link } from 'react-router-dom'
-import { StateContext } from '../../types/AppBar'
-import { useContext } from 'react'
 import MenuOpenIcon from '../../assets/hamburger.svg'
 import MenuCloseIcon from '../../assets/cross.svg'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
+import { useDispatch } from 'react-redux'
+import { layoutActions } from '../../redux/slices/layoutSlice'
 
 
 const Header: CustomFC = ({ children }) => {
-  const { menu, setMenu } = useContext(StateContext)
+  const dispatch = useDispatch()
+  const menu = useSelector((s: RootState) => s.layout.menu)
+
   const ctn = `
     self-stretch
     flex
@@ -20,7 +24,7 @@ const Header: CustomFC = ({ children }) => {
     hover:bg-gray-500
   `
 
-  const handleClick = () => setMenu(!menu)
+  const handleClick = () => dispatch(layoutActions.toggleMenu())
 
   return (
     <div className={ctn}>

@@ -1,7 +1,9 @@
 import { CustomFC } from '../../types'
 import { Link } from 'react-router-dom'
-import { StateContext } from '../../types/AppBar'
-import { useContext } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
+import { useDispatch } from 'react-redux'
+import { layoutActions } from '../../redux/slices/layoutSlice'
 
 
 const items = {
@@ -14,7 +16,7 @@ const items = {
 }
 
 const Ul: CustomFC = ({ children }) => {
-  const { menu } = useContext(StateContext)
+  const menu = useSelector((s: RootState) => s.layout.menu)
 
   const tailwind = `
     ${menu ? '' : 'hidden'}
@@ -36,7 +38,7 @@ const Li = ({ to, text }: {
   to: string,
   text: string
 }) => {
-  const { setMenu } = useContext(StateContext)
+  const dispatch = useDispatch()
 
   const tailwindLi = `
     self-stretch
@@ -52,7 +54,7 @@ const Li = ({ to, text }: {
     py-2
   `
 
-  const handleClick = () => setMenu(false)
+  const handleClick = () => dispatch(layoutActions.closeMenu())
 
   return (
     <li className={tailwindLi}>

@@ -1,6 +1,4 @@
 import { CustomFC } from '../../types'
-import { StateContext } from '../../types/AppBar'
-import { useState } from 'react'
 import Header from './Header'
 import Menu from './Menu'
 import { useDispatch } from 'react-redux'
@@ -31,18 +29,16 @@ const AppBarCtn: CustomFC = ({ children }) => {
 function AppBar() {
   const dispatch = useDispatch()
   const mode = useSelector((s: RootState) => s.theme.mode)
-  const [menu, setMenu] = useState(false)
 
   return (
-    <StateContext.Provider value={{ menu, setMenu }}>
-      <AppBarCtn>
-        <Header />
-        <Menu />
-        <button onClick={() => dispatch(themeActions.toggleMode())}>
-          {mode}
-        </button>
-      </AppBarCtn>
-    </StateContext.Provider>
+    <AppBarCtn>
+      <Header />
+      <button onClick={() => dispatch(themeActions.toggleMode())}>
+        {mode}
+      </button>
+      <div className='flex-grow' />
+      <Menu />
+    </AppBarCtn>
   )
 }
 
