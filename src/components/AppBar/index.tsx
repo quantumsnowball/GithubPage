@@ -1,6 +1,4 @@
 import { CustomFC } from '../../types'
-import { StateContext } from '../../types/AppBar'
-import { useState } from 'react'
 import Header from './Header'
 import Menu from './Menu'
 
@@ -25,15 +23,12 @@ const AppBarCtn: CustomFC = ({ children }) => {
 }
 
 function AppBar() {
-  const [menu, setMenu] = useState(false)
-
   return (
-    <StateContext.Provider value={{ menu, setMenu }}>
-      <AppBarCtn>
-        <Header />
-        <Menu />
-      </AppBarCtn>
-    </StateContext.Provider>
+    <AppBarCtn>
+      <Header />
+      <div className='flex-grow' />
+      <Menu />
+    </AppBarCtn>
   )
 }
 
