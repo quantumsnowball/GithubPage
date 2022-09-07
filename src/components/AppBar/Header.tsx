@@ -6,11 +6,13 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../redux/store'
 import { useDispatch } from 'react-redux'
 import { layoutActions } from '../../redux/slices/layoutSlice'
+import { themeActions } from '../../redux/slices/themeSlice'
 
 
 const Header: CustomFC = ({ children }) => {
   const dispatch = useDispatch()
   const menu = useSelector((s: RootState) => s.layout.menu)
+  const mode = useSelector((s: RootState) => s.theme.mode)
 
   const ctn = `
     self-stretch
@@ -31,6 +33,10 @@ const Header: CustomFC = ({ children }) => {
       <span className={title}>
         <Link to="/">Quantum Snowball</Link>
       </span>
+      <button onClick={() => dispatch(themeActions.toggleMode())}>
+        <MenuOpenIcon />
+      </button>
+      <div className='flex-grow md:hidden' />
       {children}
       <a href="#" className='md:hidden' onClick={handleClick}>
         {menu ? <MenuCloseIcon /> : <MenuOpenIcon />}

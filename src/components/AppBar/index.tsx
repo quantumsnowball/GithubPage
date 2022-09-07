@@ -27,15 +27,9 @@ const AppBarCtn: CustomFC = ({ children }) => {
 }
 
 function AppBar() {
-  const dispatch = useDispatch()
-  const mode = useSelector((s: RootState) => s.theme.mode)
-
   return (
     <AppBarCtn>
       <Header />
-      <button onClick={() => dispatch(themeActions.toggleMode())}>
-        {mode}
-      </button>
       <div className='flex-grow' />
       <Menu />
     </AppBarCtn>
