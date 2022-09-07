@@ -3,6 +3,10 @@ import { StateContext } from '../../types/AppBar'
 import { useState } from 'react'
 import Header from './Header'
 import Menu from './Menu'
+import { useDispatch } from 'react-redux'
+import { themeActions } from '../../redux/slices/themeSlice'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../redux/store'
 
 
 const AppBarCtn: CustomFC = ({ children }) => {
@@ -25,6 +29,8 @@ const AppBarCtn: CustomFC = ({ children }) => {
 }
 
 function AppBar() {
+  const dispatch = useDispatch()
+  const mode = useSelector((s: RootState) => s.theme.mode)
   const [menu, setMenu] = useState(false)
 
   return (
@@ -32,6 +38,9 @@ function AppBar() {
       <AppBarCtn>
         <Header />
         <Menu />
+        <button onClick={() => dispatch(themeActions.toggleMode())}>
+          {mode}
+        </button>
       </AppBarCtn>
     </StateContext.Provider>
   )
