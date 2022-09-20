@@ -1,12 +1,16 @@
 import { Markdown } from '../utils'
 import { items } from '../../data/AppleDaily'
+import { RandomBanner } from './common'
 
 
 export default function AppleDaily() {
   return (
-    <Markdown>
-      {items}
-    </Markdown>
+    <>
+      <RandomBanner keywords="newspaper,research" width={800} height={250} />
+      <Markdown>
+        {items}
+      </Markdown>
+    </>
   )
 }
 
