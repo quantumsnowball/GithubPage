@@ -10,7 +10,8 @@ const AppCtn: CustomFC = ({ children }) => {
   const mode = useSelector((s: RootState) => s.theme.mode)
 
   const tailwind = `
-    h-screen
+    fixed
+    h-full
     flex
     flex-col
     justify-between

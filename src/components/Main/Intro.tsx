@@ -1,12 +1,15 @@
-import ReactMarkdown from 'react-markdown'
+import { Markdown } from '../utils/markdown'
+import { RandomBanner } from '../utils/banner'
 import { items } from '../../data/Intro'
-import { Markdown } from '../utils'
 
 
 export default function Intro() {
   return (
-    <Markdown>
-      {items}
-    </Markdown>
+    <>
+      <RandomBanner keywords="energy,work" width={800} height={250} />
+      <Markdown>
+        {items}
+      </Markdown>
+    </>
   )
 }

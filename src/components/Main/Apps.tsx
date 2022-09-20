@@ -1,12 +1,16 @@
-import { Markdown } from '../utils'
+import { Markdown } from '../utils/markdown'
+import { RandomBanner } from '../utils/banner'
 import { items } from '../../data/Apps'
 
 
 export default function Apps() {
   return (
-    <Markdown>
-      {items}
-    </Markdown>
+    <>
+      <RandomBanner keywords="app" width={800} height={250} />
+      <Markdown>
+        {items}
+      </Markdown>
+    </>
   )
 }
 
