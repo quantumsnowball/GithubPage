@@ -1,6 +1,6 @@
-import { Markdown } from '../utils'
+import { Markdown } from '../utils/markdown'
+import { RandomBanner } from '../utils/banner'
 import { items } from '../../data/Research'
-import { RandomBanner } from './common'
 
 
 export default function Research() {

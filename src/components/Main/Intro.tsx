@@ -1,7 +1,6 @@
-import ReactMarkdown from 'react-markdown'
+import { Markdown } from '../utils/markdown'
+import { RandomBanner } from '../utils/banner'
 import { items } from '../../data/Intro'
-import { Markdown } from '../utils'
-import { RandomBanner } from './common'
 
 
 export default function Intro() {
