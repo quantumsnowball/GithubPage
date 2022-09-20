@@ -12,6 +12,7 @@ const AppCtn: CustomFC = ({ children }) => {
   const tailwind = `
     fixed
     h-full
+    w-full
     flex
     flex-col
     justify-between
